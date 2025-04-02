@@ -31,3 +31,6 @@ spec:
       - name: backend
       #manifesto file
         image: khalidaws2024/backend:1.0.0
+        envFrom:
+        - configMapRef:
+            name: backend
