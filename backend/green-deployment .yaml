@@ -1,0 +1,36 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: backend-green
+  #we must give namespace name otherwise it will go by default
+  namespace: expense
+  #labels of deployment resource
+  labels:
+    app: backend
+    tier: backend
+    project: expense
+    version: green
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+      tier: backend
+      project: expense
+      version: green
+  ##pod template
+  template:
+    metadata:
+      labels:
+        app: backend
+        tier: backend
+        project: expense 
+        version: green
+    spec:
+      containers:
+      - name: backend
+      #manifesto file
+        image: khalidaws2024/backend:2.0.0
+        envFrom:
+        - configMapRef:
+            name: backend
