@@ -7,4 +7,4 @@ spec:
   # one pod can contain multiple container
  containers:
  - name: debug
-   image: khalidaws2024:1.0.0
+   image: khalidaws2024/debug:1.0.0
