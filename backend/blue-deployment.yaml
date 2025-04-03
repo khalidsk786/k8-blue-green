@@ -3,7 +3,7 @@ apiVersion: apps/v1
 metadata:
   name: backend
   #we must give namespace name otherwise it will go by default
-  namespace: expense
+  namespace: expense-blue
   #labels of deployment resource
   labels:
     app: backend
@@ -25,7 +25,7 @@ spec:
         app: backend
         tier: backend
         project: expense 
-        version: green
+        version: blue
     spec:
       containers:
       - name: backend
