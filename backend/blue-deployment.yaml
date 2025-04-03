@@ -25,7 +25,7 @@ spec:
         app: backend
         tier: backend
         project: expense 
-        version: blue
+        version: green
     spec:
       containers:
       - name: backend
