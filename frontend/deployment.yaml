@@ -31,7 +31,7 @@ spec:
               path: nginx.conf
       containers:
       - name: nginx
-        image: lakshman143/frontend:1.3.0
+        image: khalidaws2024/frontend:1.2.3
         resources:
      # soft limit
           requests:
